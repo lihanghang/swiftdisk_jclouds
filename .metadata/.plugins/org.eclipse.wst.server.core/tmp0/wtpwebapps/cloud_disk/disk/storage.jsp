@@ -69,14 +69,9 @@
         <div id="filelevel">
 <!--文件导航 -->
              <a class="btn btn-default btn-sm" href="#">全部文件</a>
-            
-		     <a class="btn btn-default btn-sm" href="#">全部文件</a>
-        
-        
-        
-        
-        
-        
+             <% String current_path = (String)session.getAttribute("current_path"); %>
+		     <input type="hidden" id="current_path" value=<%=current_path %>>
+		     <a class="btn btn-default btn-sm" href="#"><%=current_path %></a>  
         </div>
         <div id="uploadcontrol" class="pull-right">
 
@@ -84,13 +79,9 @@
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 新建文件夹
             </button>
-
             <button class="btn btn-success" data-toggle="modal" data-target="#uploadModal">
                 <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>
-                上传
-            </button>
-
-
+                                     上 传 </button>
         </div>
      </div>
     </div>
@@ -107,13 +98,29 @@
       <div class="modal-body">
 
 
-<div class="ajax-upload-dragdrop" style="vertical-align: top; border: 2px dotted rgb(165, 165, 199);">
-<div class="ajax-file-upload" style="position: relative; overflow: hidden; cursor: default;">上传
-<form method="POST" action="http://storage.thucloud.com:7088/upload?current_dir=" enctype="multipart/form-data" style="margin: 0px; padding: 0px;">
-<input type="file" id="ajax-upload-id-1466682962974" name="myfile[]" multiple="" style="position: absolute; cursor: pointer; top: 0px; width: 0px; height: 25px; left: 0px; z-index: 100; opacity: 0;">
-</form></div></div><div id="mulitplefileuploader" style="display: none;">上传</div><div></div>
+<div class="ajax-upload-dragdrop" style="vertical-align: top; border: 2px dotted rgb(165, 165, 50);">
+<!-- 上传文件对象弹窗 -->
+<form action="../UploadFile?Path=<%=current_path %>" method="POST" enctype="multipart/form-data">
+			<div class="setup_info">
+				<div class="setup_info2" id="setup_inf,go2_pic" >
+					<div class="file_input">
+						<input type="file" id="file" class="fileonload" name="input_obj">
+					</div>
+				</div>
+				<div  style=" text-align:center" >
+					<input class="ajax-file-upload" style=" text-align:center  cursor: default;" type="submit"value="上传">
+				</div>
+			</div>
+		</form>
 
-        <div id="status"></div>
+
+
+
+
+
+</div><div></div>
+
+       
 
       </div>
       <div class="modal-footer">

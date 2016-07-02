@@ -44,6 +44,9 @@ public class ShowFile extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		/*
+		 * 文件列表（对象）
+		 */
 		HttpSession session=request.getSession();
 		String path = request.getParameter("open_path");
 		String getpath = (String) session.getAttribute("current_path");

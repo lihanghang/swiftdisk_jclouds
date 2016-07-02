@@ -69,6 +69,7 @@ public class Login extends HttpServlet {
 				String username = rs.getString(3);
 				//System.out.println(username);
 				session.setAttribute("username", username);
+				session.setAttribute("current_path","root");
 				 tag = true;
 				 break;
 			 } } catch (SQLException e) {
