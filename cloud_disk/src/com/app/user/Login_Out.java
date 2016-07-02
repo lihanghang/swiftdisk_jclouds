@@ -30,11 +30,11 @@ public class Login_Out extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession(false);//防止创建Session
 		if(session == null){
-		response.sendRedirect("../");
+		response.sendRedirect("./");
 		return;
 		}
 		session.invalidate();
-		response.sendRedirect("../");
+		response.sendRedirect("./");
 	}
 	
 

@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 	<%
-	if ( session.getAttribute("userInfo")==null ) {
-		 out.print("你还未登录……"); 
-		 request.getRequestDispatcher("http://localhost:8080/Local_Cloud/").forward(request, response) ;
-	} else {
+	if ( session.getAttribute("username")==null ) {
+	 	response.sendRedirect("../auth/islogi.jsp");
+		 
 	}
 %>
 <!DOCTYPE html>
@@ -48,16 +47,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        	<a id="logo_48_196" href=".." title="Lc云盘"><img src="../Resources/images/lc_meitu_1.png"/></a>
+        	<a id="logo_48_196" href=#" title="Lc云盘"><img src="../Resources/images/lc_meitu_1.png"/></a>
       </div>
        <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav pull-right">
         <li class="dropdown">
-          <a id="drop4" role="button" data-toggle="dropdown" href="http://localhost:8080/Local_Cloud/disk/storage.jsp#"><%=session.getAttribute("username")%><b class="caret"></b></a>
+          <a id="drop4" role="button" data-toggle="dropdown" href="http://localhost:8080/cloud_disk/disk/storage.jsp#"><%=session.getAttribute("username")%><b class="caret"></b></a>
           <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://localhost:8080/Local_Cloud/disk/storage.jsp#">个人信息</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://localhost:8080/cloud_disk/disk/storage.jsp#">个人信息</a></li>
             <li role="presentation" class="divider"></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="..">退出</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="../Login_Out">退出</a></li>
           </ul>
         </li>
         </ul>
