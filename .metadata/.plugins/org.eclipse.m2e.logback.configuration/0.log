@@ -26,3 +26,21 @@
 2016-07-02 11:44:08,913 [Worker-5] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for cloud_disk
 2016-07-02 11:44:08,921 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
 2016-07-02 11:44:08,932 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:48:55,408 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:48:55,409 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-02 11:48:55,411 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:48:55,412 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-02 11:49:37,360 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:49:37,361 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-02 11:49:37,363 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:49:37,364 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-02 11:49:37,365 [Worker-4] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of cloud_disk
+2016-07-02 11:49:37,368 [Worker-4] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for cloud_disk
+2016-07-02 11:49:37,369 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:50:13,065 [main] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: cloud_disk:cloud_disk:0.0.1-SNAPSHOT @ E:\swiftdisk\swiftdisk_jclouds\cloud_disk\pom.xml.
+2016-07-02 11:50:19,055 [main] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: cloud_disk:cloud_disk:0.0.1-SNAPSHOT @ E:\swiftdisk\swiftdisk_jclouds\cloud_disk\pom.xml.
+2016-07-02 11:51:11,494 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:51:11,495 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-02 11:51:11,497 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-02 11:51:11,498 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-02 11:51:38,703 [main] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: cloud_disk:cloud_disk:0.0.1-SNAPSHOT @ E:\swiftdisk\swiftdisk_jclouds\cloud_disk\pom.xml.
