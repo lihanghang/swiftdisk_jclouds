@@ -2,8 +2,6 @@ package com.app.file;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -24,9 +22,7 @@ import org.jclouds.io.Payload;
 import org.jclouds.io.payloads.InputStreamPayload;
 import org.jclouds.openstack.swift.v1.SwiftApi;
 import org.jclouds.openstack.swift.v1.features.ObjectApi;
-import org.jclouds.openstack.swift.v1.options.PutOptions;
 
-import com.google.common.collect.ImmutableMap;
 import com.swift.dao.swift_util;
 
 /**
@@ -58,8 +54,6 @@ public class UploadFile extends HttpServlet {
 		// TODO Auto-generated method stub
 		    request.setCharacterEncoding("UTF-8"); 
 	        response.setCharacterEncoding("UTF-8");
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
-			String    data      = df.format(new Date());// new Date()为获取当前系统时间
 		    HttpSession session = request.getSession();
 	        String container    = (String) session.getAttribute("username");
 			SwiftApi swift = swift_util.getSwift();
@@ -92,7 +86,7 @@ public class UploadFile extends HttpServlet {
 			
 			String path = request.getParameter("current_path");
 
-			 objectApi.put(path+"/"+fileName, payload,PutOptions.Builder.metadata(ImmutableMap.of("data", data)));		
+			 objectApi.put(path+"/"+fileName, payload);		
 			 session.setAttribute("current_path",path);
 			 RequestDispatcher disp = request.getRequestDispatcher("/ShowFile");
 		        disp.forward(request, response);     

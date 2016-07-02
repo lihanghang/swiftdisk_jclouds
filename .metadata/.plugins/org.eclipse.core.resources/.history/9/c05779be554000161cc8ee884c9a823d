@@ -248,11 +248,7 @@
                 <td class="filecontrol"><form action="http://storage.thucloud.com:7088/delete_file" method="post" style="float:left"><input type="hidden" name="file_name" value="test/"><input type="hidden" name="current_dir" value=""></form><a class="delete-file" href="javascript:" style="float:left">删除</a>
                     
                     <a class="share-file" onclick="share_file(&#39;test/&#39;)" data-toggle="modal" data-target="#shareModal" href="http://storage.thucloud.com:7088/home/files#" style="float:left">分享</a></td>
-                <td class="listsize"><% long size = containerTmp.getBytesUsed();
-                
-                out.print(size/1024);
-                
-                %>KB</td>
+                <td class="listsize"><%=(containerTmp.getBytesUsed()/1024) %>kb</td>
                 <td class="listdate">##</td>
             </tr>
             	

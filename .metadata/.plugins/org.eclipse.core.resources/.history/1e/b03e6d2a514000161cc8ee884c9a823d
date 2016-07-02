@@ -1,20 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
-<%@page import="java.util.LinkedList"%>
-<%@page import="java.util.List"%>
-<%@page	import="org.jclouds.openstack.swift.v1.options.ListContainerOptions"%>
-<%@page import="org.jclouds.openstack.swift.v1.domain.SwiftObject"%>
-<%@page import="org.jclouds.openstack.swift.v1.domain.ObjectList"%>
-<%@page import="org.jclouds.openstack.swift.v1.features.ObjectApi"%>
-<%@page import="org.jclouds.openstack.swift.v1.domain.Container"%>
-<%@page import="com.google.common.collect.FluentIterable"%>
-<%@page import="org.jclouds.openstack.swift.v1.SwiftApi"%>
-<%@page import = "com.swift.dao.swift_util" %>
-
-<%@page import = " java.util.Set" %>
-<%@page import = "org.jclouds.openstack.swift.v1.features.ContainerApi" %>
-
-
-<%
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+	<%
 	if ( session.getAttribute("username")==null ) {
 	 	response.sendRedirect("../auth/islogi.jsp");
 		 
@@ -38,11 +24,7 @@
 <link href="../Resources/file/uploadfile.css" rel="stylesheet">
 <link href="../Resources/file/jquery.contextMenu.css" rel="stylesheet">
 <link href="../Resources/file/MimeTypeIcon.css" rel="stylesheet">
-<%
-	
-	Set<String> regions = swift_util.getSwift().getConfiguredRegions();
-	ContainerApi containerAPI = swift_util.getSwift().getContainerApi(regions.iterator().next());
-%>
+
 
     
 
@@ -220,50 +202,23 @@
           </tr>
         </thead>
     <tbody id="filebody">
-      <%
-        	   FluentIterable<Container> containers = containerAPI.list();
-							for (Container containerTmp : containers) {
-						%> 
             <tr class="fileinfo">
-            
                 <td class="listcheckbox"><input type="checkbox" class="checkfile" name="checkedfile" value="test"></td>
                 <td class="listfilename">
                 <div class="folder-icon icon" style="float:left"></div>
                 <div style="float:left" class="filename-wrapper">
-                
-              
-						
                     <a href="http://storage.thucloud.com:7088/home/files?current_dir=test" class="file-name-wrapper">
-                           <span class="file-name"> <%=containerTmp.getName()%></span>
-						
-					
-                
-                
-                
-                
-                
+                           <span class="file-name">test</span>
                     </a>
                 </div>
                 </td>
                 <td class="filecontrol"><form action="http://storage.thucloud.com:7088/delete_file" method="post" style="float:left"><input type="hidden" name="file_name" value="test/"><input type="hidden" name="current_dir" value=""></form><a class="delete-file" href="javascript:" style="float:left">删除</a>
                     
                     <a class="share-file" onclick="share_file(&#39;test/&#39;)" data-toggle="modal" data-target="#shareModal" href="http://storage.thucloud.com:7088/home/files#" style="float:left">分享</a></td>
-                <td class="listsize"><% long size = containerTmp.getBytesUsed();
-                
-                out.print(size/1024);
-                
-                %>KB</td>
+                <td class="listsize">##</td>
                 <td class="listdate">##</td>
             </tr>
-            	
-						<%
-							}
-						%>
         </tbody>
-        
-        	
-        
-        
     </table>
 </div>
 

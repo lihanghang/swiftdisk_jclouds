@@ -252,7 +252,7 @@
                 
                 out.print(size/1024);
                 
-                %>KB</td>
+                %></td>
                 <td class="listdate">##</td>
             </tr>
             	
