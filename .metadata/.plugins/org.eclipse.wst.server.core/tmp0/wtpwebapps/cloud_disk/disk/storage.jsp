@@ -153,9 +153,9 @@
         <h4 class="modal-title" id="newFolderModalLabel">新建文件夹</h4>
       </div>
       <div class="modal-body">
-          <form action="http://storage.thucloud.com:7088/new_folder" method="get">
+          <form action="../CreatFloder" method="POST">
               <input type="hidden" name="current_dir" value="">
-              <input type="text" name="new_folder">
+              <input type="text"  placeholder="请输入文件夹名"  name="new_folder">
               <input type="submit" class="btn btn-primary btn-large" value="新建">
           </form>
       </div>
