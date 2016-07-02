@@ -85,7 +85,7 @@ public class UploadFile extends HttpServlet {
 			String path = request.getParameter("current_path");
 
 			 objectApi.put(path+"/"+fileName, payload);		
-			 session.setAttribute("current_path",path);
+			 session.setAttribute("path",path);
 			 RequestDispatcher disp = request.getRequestDispatcher("/ShowFile");
 		        disp.forward(request, response);     
 	}

@@ -100,7 +100,7 @@
 
 <div class="ajax-upload-dragdrop" style="vertical-align: top; border: 2px dotted rgb(165, 165, 50);">
 <!-- 上传文件对象弹窗 -->
-<form action="../UploadFile?current_path<%=current_path %>>" method="POST" enctype="multipart/form-data">
+<form action="../UploadFile?current_path=<%=current_path%>" method="POST" enctype="multipart/form-data">
 			<div class="setup_info">
 				<div class="setup_info2" id="setup_inf,go2_pic" >
 					<div class="file_input">
