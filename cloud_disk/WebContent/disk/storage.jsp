@@ -189,7 +189,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="shareModalLabel">分享文件</h4>
+        <h4 class="modal-title" id="shareModalLabel">删除</h4>
       </div>
       <div class="modal-body">
           <input type="text" name="clipboard-text" id="clipboard-text" value="its me!" style="width:300px">
@@ -233,7 +233,7 @@
                 
               
 						
-                    <a href="http://storage.thucloud.com:7088/home/files?current_dir=test" class="file-name-wrapper">
+                    <a href="http://localhost:8080/cloud_disk/storage.jsp?current_dir=test" class="file-name-wrapper">
                            <span class="file-name"> <%=containerTmp.getName()%></span>
 						
 					
@@ -245,12 +245,32 @@
                     </a>
                 </div>
                 </td>
-                <td class="filecontrol"><form action="http://storage.thucloud.com:7088/delete_file" method="post" style="float:left"><input type="hidden" name="file_name" value="test/"><input type="hidden" name="current_dir" value=""></form><a class="delete-file" href="javascript:" style="float:left">删除</a>
-                    
-                    <a class="share-file" onclick="share_file(&#39;test/&#39;)" data-toggle="modal" data-target="#shareModal" href="http://storage.thucloud.com:7088/home/files#" style="float:left">分享</a></td>
-                <td class="listsize"><% float size = (float)containerTmp.getBytesUsed();
+               
+                <td class="file_control">
+                <a href="http://localhost:8080/cloud_disk/storage.jsp?current_dir=test" >删除</a>
+                <a href="http://localhost:8080/cloud_disk/storage.jsp?current_dir=test" >下载</a>
+                 </td>
+               
+               
+             
+               
+                <td class="listsize"><%
+                
+                
+                float size = (float)containerTmp.getBytesUsed();
+                if(size<1000.00)
+                {
+                	DecimalFormat df = new DecimalFormat("0");
+                	out.print(df.format(size)+"Bytes");
+                	
+                }else{
+                
                 DecimalFormat df = new DecimalFormat("0.0");
-                out.print(df.format(size/1024/1024)); %>MB</td>
+                out.print(df.format(size/1024/1024)+"MB");
+                
+                }
+                
+                %></td>
                 <td class="listdate">##</td>
             </tr>
             	
