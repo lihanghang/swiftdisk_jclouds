@@ -9,7 +9,7 @@
 <%@page import="com.google.common.collect.FluentIterable"%>
 <%@page import="org.jclouds.openstack.swift.v1.SwiftApi"%>
 <%@page import = "com.swift.dao.swift_util" %>
-<%@page import = "java.text.DecimalFormat"%>
+
 <%@page import = " java.util.Set" %>
 <%@page import = "org.jclouds.openstack.swift.v1.features.ContainerApi" %>
 
@@ -249,8 +249,8 @@
                     
                     <a class="share-file" onclick="share_file(&#39;test/&#39;)" data-toggle="modal" data-target="#shareModal" href="http://storage.thucloud.com:7088/home/files#" style="float:left">分享</a></td>
                 <td class="listsize"><% float size = (float)containerTmp.getBytesUsed();
-                DecimalFormat df = new DecimalFormat("0.0");
-                out.print(df.format(size/1024/1024)); %>MB</td>
+                   
+                out.print((float)Math.round(size/1024)/100); %>MB</td>
                 <td class="listdate">##</td>
             </tr>
             	

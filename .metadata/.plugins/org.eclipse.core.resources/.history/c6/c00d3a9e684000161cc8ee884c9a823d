@@ -250,7 +250,7 @@
                     <a class="share-file" onclick="share_file(&#39;test/&#39;)" data-toggle="modal" data-target="#shareModal" href="http://storage.thucloud.com:7088/home/files#" style="float:left">分享</a></td>
                 <td class="listsize"><% float size = (float)containerTmp.getBytesUsed();
                 DecimalFormat df = new DecimalFormat("0.0");
-                out.print(df.format(size/1024/1024)); %>MB</td>
+                out.print(size/1024/1024); %>MB</td>
                 <td class="listdate">##</td>
             </tr>
             	
