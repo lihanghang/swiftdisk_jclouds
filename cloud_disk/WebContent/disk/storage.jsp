@@ -53,7 +53,7 @@
        <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav pull-right">
         <li class="dropdown">
-          <a id="drop4" role="button" data-toggle="dropdown" href="http://localhost:8080/Local_Cloud/disk/storage.jsp#"><%=request.getAttribute("username")%><b class="caret"></b></a>
+          <a id="drop4" role="button" data-toggle="dropdown" href="http://localhost:8080/Local_Cloud/disk/storage.jsp#"><%=session.getAttribute("username")%><b class="caret"></b></a>
           <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://localhost:8080/Local_Cloud/disk/storage.jsp#">个人信息</a></li>
             <li role="presentation" class="divider"></li>
@@ -222,162 +222,18 @@
 <div id="footer">
 
   <div class="container">
-    <p class="text-muted credit text-center">软件工程 LC云盘oss开发小组 copyright ©2016<br>
+    <p class="text-muted credit text-center">软件工程    LC云盘oss开发小组 copyright ©2016<br>
     <a href="..">联系我们</a>‎‎‎
-        <!--
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000075329'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000075329%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-    -->
     </p>
   </div>
-
 </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-   <!-- <script src="/static/js/jquery.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
--->
     <script src="../Resources/file/jquery.js"></script>
     <script src="../Resources/file/bootstrap.min.js"></script>
-    
-    
-    <script src="../Resources/file/jquery.js"></script>
+   <script src="../Resources/file/jquery.js"></script>
     <script src="../Resources/file/jquery.uploadfile.min.js"></script>
-    <script type="text/javascript" src="./Resources/file/base64.js"></script>
+    <script type="text/javascript" src="../Resources/file/base64.js"></script>
     <script src="../Resources/file/ZeroClipboard.js"></script>
     <script src="../Resources/file/main.js"></script>
-    <div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;"><object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="http://storage.thucloud.com:7088/static/clipborad/ZeroClipboard.swf?noCache=1466682961897"><param name="allowScriptAccess" value="sameDomain"><param name="allowNetworking" value="all"><param name="menu" value="false"><param name="wmode" value="transparent"><param name="flashvars" value="trustedOrigins=storage.thucloud.com%3A7088%2C%2F%2Fstorage.thucloud.com%3A7088%2Chttp%3A%2F%2Fstorage.thucloud.com%3A7088&amp;swfObjectId=global-zeroclipboard-flash-bridge&amp;jsVersion=2.2.0"><div id="global-zeroclipboard-flash-bridge_fallbackContent">&nbsp;</div></object></div>
-    <!--
-    <script type="text/javascript" src="/static/js/jquery.contextMenu.js"></script>
-    <script>
-    $(function(){
-    $('#filebody').contextMenu({
-            selector: 'tr',
-            callback: function(key, options) {
-                if (key=='delete'){$(this).children(".filecontrol").children('form').submit()}
-                else if (key=='rename'){
-                     $current_file_name = $(this).contents('.listfilename').contents('.file-name').text()
-
-             $(this).children('.listfilename').html("<form method='get' action='/rename_file'><input type='hidden' name='current_dir' value=''> <input type='text' value='"+ $current_file_name +"' name='new_name'/><input type='hidden' value='"+$current_file_name+"' name='old_name'/><input type='submit' class='btn btn-sm btn-danger'><a class='btn btn-sm btn-default' href='/home/files' >取消</a></form>")
-                }
-                else if(key == 'download'){
-                    file_name = $(this).children('.listfilename').text()
-                   $('#downloadfilename').val(file_name);
-                    $("#download_window").submit()
-
-                }
-
-            },
-            items: {
-
-                "delete": {name: "删除"},
-                "rename": {name: "重命名"}
-            }
-        });
-    });
-    </script>-->
-    <script type="text/javascript">
-    function reloadFilelist(){
-        htmlobj=$.ajax({url:"/filelist?current_dir=",async:false});
-        $("#filebody").html(htmlobj.responseText);
-        $(".checkfile").bind('click',function(){
-
-                    var no_checked = true
-                    $(":checkbox:checked").each(function(){
-
-                           if($(this).prop("checked")){
-                               no_checked = false
-                           }
-                    });
-                if(!no_checked){
-                        $("#operateonfiles").html("<a href='javascript:' onclick='batch_download()' >批量下载</a>");
-                    }
-                else{
-                    $("#operateonfiles").html("文件操作");
-                }
-                });
-            $('.hash-changer').bind('click', function() {
-                var hash = $(this).attr('href');
-                hashchanged(hash);
-            });
-            $("#checkboxcontrol").click(function(){
-                if($(this).prop('checked')==true){
-                    $(".checkboxset").each(function(){
-                      $(this).prop("checked", true);
-                    })
-                }
-                else{
-                   $(".checkboxset").each(function(){
-                      $(this).prop("checked", false);
-                    })
-                }
-            })
-          $(".rename-file").bind('click',function(){
-              console.log('rename');
-
-             $current_file_name = $(this).parent().parent().contents('.listfilename').contents(".filename-wrapper").contents(".file-name-wrapper").contents(".file-name").text()
-             $(this).parent().parent().children('.listfilename').html("<form method='get' action='/rename_file'> <input type='hidden' name='current_dir' value=''><input type='text' value='"+ $current_file_name +"' name='new_name'/><input type='hidden' value='"+$current_file_name+"' name='old_name'/><input type='submit' class='btn btn-sm btn-danger' value='提交'><a class='btn btn-sm btn-default' href='/home/files' >取消</a></form>")
-
-            })
-          $(".delete-file").bind('click',function(){
-
-              $(this).parent().children('form').submit()
-
-          })
-    }
-        $(document).ready(function(){
-            reloadFilelist();
-
-            var upload_settings = {
-                url: "/upload"+"?current_dir="+"",
-                dragDrop:true,
-                fileName: "myfile",
-                returnType:"json",
-                showDelete:false,
-                showDown:true,
-                 onSuccess:function(files,data,xhr)
-                {
-                   // alert((data));
-                    console.log(data);
-                    reloadFilelist();
-                }
-            };
-            var uploadObj = $("#mulitplefileuploader").uploadFile(upload_settings);
-
-        });
-        function handle_click_file(file_name){
-                $('#downloadModalLabel').html(file_name);
-                $('#downloadfilename').val(file_name);
-        }
-        function share_file(file_name){
-            var url = '/openshare';
-            var param = {}; // 组装发送参数
-                param['filename']  = file_name;
-                param['current_dir'] = '';
-            $.get(url, param, function(sharedInfo) {
-                console.log(sharedInfo)
-                  $("#clipboard-text").val("http://storage.thucloud.com:7070#?code="+sharedInfo)
-              });
-        }
-        function batch_download(){
-            var all_files = '';
-             $(":checkbox:checked").each(function(){
-                    console.log($(this).val());
-                         all_files+= $(this).val()+"#";
-             }
-             );
-            console.log(all_files);
-             var url = '/batchDownload'; // 取Form中要提交的链接
-                var param = {}; // 组装发送参数
-                param['files']  = all_files;
-                param['current_dir'] = '';
-              $.get(url, param, function(dom) {
-                  location.href = '/media/buffer/batched/'+dom;
-              });
-        }
-    </script>
-
-
-  
-
+    <div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;">
+    <object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="http://storage.thucloud.com:7088/static/clipborad/ZeroClipboard.swf?noCache=1466682961897"><param name="allowScriptAccess" value="sameDomain"><param name="allowNetworking" value="all"><param name="menu" value="false"><param name="wmode" value="transparent"><param name="flashvars" value="trustedOrigins=storage.thucloud.com%3A7088%2C%2F%2Fstorage.thucloud.com%3A7088%2Chttp%3A%2F%2Fstorage.thucloud.com%3A7088&amp;swfObjectId=global-zeroclipboard-flash-bridge&amp;jsVersion=2.2.0"><div id="global-zeroclipboard-flash-bridge_fallbackContent">&nbsp;</div></object></div>
 </body></html>

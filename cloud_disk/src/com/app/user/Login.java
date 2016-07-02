@@ -66,8 +66,9 @@ public class Login extends HttpServlet {
 			 rs = pstm.executeQuery();
 			while(rs.next()){
 				HttpSession session = request.getSession();
-				String userInfo = email;
-				session.setAttribute("userInfo", userInfo);
+				String username = rs.getString(3);
+				//System.out.println(username);
+				session.setAttribute("username", username);
 				 tag = true;
 				 break;
 			 } } catch (SQLException e) {
