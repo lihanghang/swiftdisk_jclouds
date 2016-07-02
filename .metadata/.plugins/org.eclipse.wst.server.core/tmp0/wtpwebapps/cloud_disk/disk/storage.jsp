@@ -67,10 +67,16 @@
     <div id="overallcontrol" class="container"> 
     <div class="span8">
         <div id="filelevel">
-
-            <a class="btn btn-default btn-sm" href="#">全部文件</a>
+<!--文件导航 -->
+             <a class="btn btn-default btn-sm" href="#">全部文件</a>
             
-
+		     <a class="btn btn-default btn-sm" href="#">全部文件</a>
+        
+        
+        
+        
+        
+        
         </div>
         <div id="uploadcontrol" class="pull-right">
 

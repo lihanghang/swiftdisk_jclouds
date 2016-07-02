@@ -25,7 +25,7 @@
 				color:blue;
 			}
 			#error span{
-				font-size:80px;
+				font-size:50px;
 				color:#38A3DB;
 			}
 		</style>
@@ -39,7 +39,7 @@
 	        <div id="main">
 	        	<div id="error">
 	        		<span>登录失败</span>
-	      			<h1><a href="../">对不起，您输入的密码或用户名错误,请重新登录！</a></h1>
+	      			<h1>对不起，您输入的密码或用户名错误,请重新<a href="../">登录</a>！</h1>
 	        	</div>
 	        	
 	        </div>

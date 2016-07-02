@@ -64,7 +64,7 @@
         <input type="submit" value="注册" class="btn btn-primary btn-block" id="is_disable">
     </div>
     <div class="form-group">
-        已经有账号？点击<a href="http://localhost:8080/cloud_app">登录</a>
+        已经有账号？点击<a href="http://localhost:8080/cloud_disk">登录</a>
     </div>
  
   </form>
