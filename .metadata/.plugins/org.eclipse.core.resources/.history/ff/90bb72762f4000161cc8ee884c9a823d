@@ -64,11 +64,11 @@ public class UploadFile extends HttpServlet {
 			InputStream in = null;
 			try {
 				Map<String, List<FileItem>> list = upload.parseParameterMap(request);
-				Iterator<FileItem> it = list.get("input_obj").iterator();
+				Iterator<FileItem> i = list.get("input_obj").iterator();
 				
-				 while ( it.hasNext () ) 
+				 while ( i.hasNext () ) 
 		         {
-		            FileItem fi = (FileItem)it.next();
+		            FileItem fi = (FileItem)i.next();
 		            if ( !fi.isFormField () )	
 		            {
 		            fileName = fi.getName(); 
@@ -82,10 +82,11 @@ public class UploadFile extends HttpServlet {
 			
 			Payload payload = new InputStreamPayload(in);
 			
-			String path = request.getParameter("current_path");
+			String path = request.getParameter("Cruurent_Path");
 
-			 objectApi.put(path+"/"+fileName, payload);		
-			 session.setAttribute("path",path);
+			String ret = objectApi.put(path+"/"+fileName, payload);
+			
+			session.setAttribute("path",path);
 			 RequestDispatcher disp = request.getRequestDispatcher("/ShowFile");
 		        disp.forward(request, response);     
 	}

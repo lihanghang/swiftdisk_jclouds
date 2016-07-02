@@ -58,7 +58,7 @@ public class ShowFile extends HttpServlet {
 		List<? extends SwiftObject>  objects = objectApi.list(opts);
 	    session.setAttribute("objs",objects);
 	    session.setAttribute("path",path);    
-	    response.sendRedirect("./disk/storage.jsp");
+	    response.sendRedirect("./auth/storage.jsp");
 	}
 
 }
