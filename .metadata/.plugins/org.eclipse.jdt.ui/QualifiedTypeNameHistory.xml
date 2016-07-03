@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="org.jclouds.openstack.swift.v1.options.ListContainerOptions"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="org.jclouds.openstack.swift.v1.SwiftApi"/>
+<fullyQualifiedTypeName name="com.swift.dao.swift_util"/>
+<fullyQualifiedTypeName name="org.jclouds.openstack.swift.v1.features.ObjectApi"/>
+<fullyQualifiedTypeName name="org.jclouds.io.Payload"/>
+<fullyQualifiedTypeName name="org.jclouds.io.Payloads"/>
+<fullyQualifiedTypeName name="com.google.common.io.ByteSource"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+</qualifiedTypeNameHistroy>
