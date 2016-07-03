@@ -44,8 +44,9 @@ public class ShowFloder extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		/*
-		 * 容器列表（文件夹）
+		 * 瀹瑰櫒鍒楄〃锛堟枃浠跺す锛�
 		 */
+		//DeleteObjectsAndContainer deleteObjectsAndContainer = new DeleteObjectsAndContainer(args[0], args[1]);
 		HttpSession session=request.getSession();
 		Set<String> regions = swift_util.getSwift().getConfiguredRegions();
 		ContainerApi containerAPI = swift_util.getSwift().getContainerApi(regions.iterator().next());

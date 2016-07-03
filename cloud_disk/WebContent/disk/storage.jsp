@@ -225,15 +225,15 @@
 							for (Container containerTmp : containers) {
 						%> 
             <tr class="fileinfo">
-            
-                <td class="listcheckbox"><input type="checkbox" class="checkfile" name="checkedfile" value="test"></td>
+        
+                <td class="listcheckbox"><%int i =1; i ++ ;out.print(i);%></td>
                 <td class="listfilename">
                 <div class="folder-icon icon" style="float:left"></div>
                 <div style="float:left" class="filename-wrapper">
                 
               
 						
-                    <a href="http://localhost:8080/cloud_disk/storage.jsp?current_dir=test" class="file-name-wrapper">
+                    <a href="../ShowFile?current_dir=<%=containerTmp.getName()%>" class="file-name-wrapper">
                            <span class="file-name"> <%=containerTmp.getName()%></span>
 						
 					
@@ -247,7 +247,7 @@
                 </td>
                
                 <td class="file_control">
-                <a href="http://localhost:8080/cloud_disk/storage.jsp?current_dir=test" >删除</a>
+                <a  onclick="return window.confirm('确定要删除此文件？')" href="../DeleteFile?current_dir=<%=containerTmp.getName() %>" >删除</a>
                 <a href="http://localhost:8080/cloud_disk/storage.jsp?current_dir=test" >下载</a>
                  </td>
                

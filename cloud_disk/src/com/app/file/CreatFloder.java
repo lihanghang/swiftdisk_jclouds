@@ -52,12 +52,12 @@ public class CreatFloder extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		/*
-		 * 实现创建文件夹（容器）
+		 * 瀹炵幇鍒涘缓鏂囦欢澶癸紙瀹瑰櫒锛�
 		 */
 		request.setCharacterEncoding("UTF-8"); 
 	    response.setCharacterEncoding("UTF-8");
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
-		String    data      = df.format(new Date());// new Date()为获取当前系统时间
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//璁剧疆鏃ユ湡鏍煎紡
+		String    data      = df.format(new Date());// new Date()涓鸿幏鍙栧綋鍓嶇郴缁熸椂闂�
 		String fileName = request.getParameter("new_folder");
 	    HttpSession session=request.getSession(); 
 		//String path = request.getParameter("current_path");
@@ -71,6 +71,7 @@ public class CreatFloder extends HttpServlet {
 	                      "data", data));
 	   
 	      containerApi.create(fileName, options);
+	     
 	      response.sendRedirect("./disk/storage.jsp");
 		
 		
