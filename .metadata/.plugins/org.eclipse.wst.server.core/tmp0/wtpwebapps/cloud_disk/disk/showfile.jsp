@@ -225,31 +225,59 @@
          
 		   List<? extends SwiftObject> objs = (List)session.getAttribute("objs");
       
-              if(objs.isEmpty()==true){
-                 
-            	  
-              }
+           
 		   		for(int i = 0 ; i< objs.size(); i++){
 		   %> 
             <tr class="fileinfo">
         
                 <td class="listcheckbox"></td>
                 <td class="listfilename">
+                <%   String  name = objs.get(i).getName();
+                     if(name.indexOf("/")==-1)
+                     {
+                
+                        
+                
+                %>
                 <div class="image-icon icon" style="float:left"></div>
                 <div style="float:left" class="filename-wrapper">
-         
+              
                       <span class="file-name"> <%=objs.get(i).getName()%></span>		
                 </div>
                 </td>
-               
-                <td class="file_control">
+                  <td class="file_control">
                 <a  onclick="return window.confirm('确定要删除此文件？')" href="../DeleteObject?fileName=<%=objs.get(i).getName() %>" >删除</a>
                 
                 <a href="../DownLoadFile?objectName=<%=objs.get(i).getName() %>" >下载</a>
                  </td>
+                <%  } else { %>
+                
+                 <div class="folder-icon icon" style="float:left"></div>
+                <div style="float:left" class="filename-wrapper">
+              <a href="../ShowFile?current_dir=<%=current_path %><%= objs.get(i).getName()%>" class="file-name-wrapper">
+                      <span class="file-name"> <% String realname =objs.get(i).getName();
+                               
+                            out.print(realname.substring(1));
+                      
+                      
+                      %></span>	
+                      </a>	
+                </div>
+                </td>
+                
+                
+                
                
                
-             
+                <td class="file_control">
+                <a  onclick="return window.confirm('确定要删除此文件？')" href="../DeleteObject?fileName=<%=objs.get(i).getName() %>" >删除</a>
+                
+                <a href="../DownLoadFile?objectName=<%=objs.get(i).getName() %>" >打开</a>
+                 </td>
+               
+               
+              
+                <%} %>
                
                 <td class="listsize">
                 

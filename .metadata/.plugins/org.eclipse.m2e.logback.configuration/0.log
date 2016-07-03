@@ -2140,3 +2140,83 @@
 2016-07-03 16:35:19,078 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
 2016-07-03 16:35:19,078 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
 2016-07-03 16:35:19,080 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:41:28,139 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:41:28,142 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:41:28,142 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:41:28,142 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:45:45,938 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:45:45,939 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:45:45,940 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:45:45,941 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:47:32,116 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:47:32,117 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:47:32,118 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:47:32,119 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:48:25,769 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:48:25,769 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:48:25,772 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:48:25,772 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:49:12,180 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:49:12,182 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:49:12,184 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:49:12,186 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:49:17,517 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:49:17,519 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:49:17,520 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:49:17,520 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:49:55,561 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:49:55,563 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:49:55,565 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:49:55,568 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:51:49,312 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:51:49,313 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:51:49,315 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:51:49,315 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:55:33,280 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:55:33,280 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:55:33,280 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:55:33,282 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 16:58:08,110 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:58:08,112 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 16:58:08,114 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 16:58:08,116 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:02:40,874 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:02:40,877 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:02:40,880 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:02:40,880 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:04:21,266 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:04:21,267 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:04:21,268 [Worker-48] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:04:21,268 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:06:29,870 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:06:29,876 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:06:29,876 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:06:29,877 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:07:34,631 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:07:34,631 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:07:34,633 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:07:34,635 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:09:12,579 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:09:12,580 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:09:12,582 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:09:12,582 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:09:24,943 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:09:24,946 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:09:24,947 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:09:24,947 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:12:53,641 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:12:53,645 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:12:53,647 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:12:53,647 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:13:21,798 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:13:21,799 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:13:21,801 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:13:21,802 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:17:31,788 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:17:31,788 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:17:31,790 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:17:31,790 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources
+2016-07-03 17:17:51,123 [Worker-50] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:17:51,124 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\main\resources
+2016-07-03 17:17:51,125 [Worker-50] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-03 17:17:51,126 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\swiftdisk\swiftdisk_jclouds\cloud_disk\src\test\resources

@@ -95,7 +95,7 @@ public class UploadFile extends HttpServlet {
 
 			 objectApi.put(fileName, payload,PutOptions.Builder.metadata(ImmutableMap.of("data", data)));		
 			 session.setAttribute("current_path",path);
-			 response.sendRedirect("./disk/showfile.disk");
+			 response.sendRedirect("../disk/showfile.disk");
 	}
 
 }
