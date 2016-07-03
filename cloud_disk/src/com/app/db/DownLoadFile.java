@@ -36,8 +36,30 @@ public class DownLoadFile extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		 SwiftApi swift = swift_util.getSwift();
+		 HttpSession session=req.getSession();
+        String container = (String) session.getAttribute("path");
+        String objectName = req.getParameter ("objectName");
+        ObjectApi objectApi = swift.getObjectApi("RegionOne", container);
+        SwiftObject obj = objectApi.get(objectName, GetOptions.NONE);
+       // System.out.println(container);
+		//String[] realName = objectName.split("/");
+		//String filename = realName[realName.length-1];
+		
+        
+        InputStream in = obj.getPayload().openStream();
+        FileOutputStream out = new FileOutputStream("D://cloud_disk_download/"+objectName );
+        //System.out.print(out);
+        byte buffer[] = new byte[1024];
+        int len = 0;
+        while((len=in.read(buffer))>=0){
+        	out.write(buffer, 0, len);
+        }
+        in.close();
+        out.close();  
+        res.sendRedirect("./disk/down_info.jsp");
 	}
 
 	/**
@@ -48,28 +70,7 @@ public class DownLoadFile extends HttpServlet {
 		/*
 		 * download file
 		 */
-		 SwiftApi swift = swift_util.getSwift();
-		 HttpSession session=req.getSession();
-        String container = (String) session.getAttribute("username");
-        String objectName = req.getParameter ("objectName");
-        ObjectApi objectApi = swift.getObjectApi("RegionOne", container);
-        SwiftObject obj = objectApi.get(objectName, GetOptions.NONE);
-        
-		String[] realName = objectName.split("/");
-		String filename = realName[realName.length-1];
-		System.out.print(filename);
-        
-        InputStream in = obj.getPayload().openStream();
-        FileOutputStream out = new FileOutputStream("E://out/"+filename);
-        byte buffer[] = new byte[1024];
-        int len = 0;
-        while((len=in.read(buffer))>0){
-        	out.write(buffer, 0, len);
-        }
-        in.close();
-        out.close();
-        
-        res.sendRedirect("Views/download.jsp");
+		
 	}
 	}
 

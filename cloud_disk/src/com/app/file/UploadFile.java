@@ -62,7 +62,7 @@ public class UploadFile extends HttpServlet {
 			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//璁剧疆鏃ユ湡鏍煎紡
 			String    data      = df.format(new Date());// new Date()涓鸿幏鍙栧綋鍓嶇郴缁熸椂闂�
 		    HttpSession session = request.getSession();
-	        String container    = (String) session.getAttribute("username");
+	        String container    = (String) session.getAttribute("current_path");
 			SwiftApi swift = swift_util.getSwift();
 			
 			ObjectApi objectApi = swift.getObjectApi("RegionOne", container);
@@ -93,10 +93,9 @@ public class UploadFile extends HttpServlet {
 			
 			String path = request.getParameter("current_path");
 
-			 objectApi.put(path+"/"+fileName, payload,PutOptions.Builder.metadata(ImmutableMap.of("data", data)));		
+			 objectApi.put(fileName, payload,PutOptions.Builder.metadata(ImmutableMap.of("data", data)));		
 			 session.setAttribute("current_path",path);
-			 RequestDispatcher disp = request.getRequestDispatcher("/ShowFile");
-		        disp.forward(request, response);     
+			 response.sendRedirect("../disk/showfile.disk");
 	}
 
 }

@@ -37,6 +37,29 @@ public class ShowFile extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8"); 
+	    response.setCharacterEncoding("UTF-8");
+		HttpSession session=request.getSession();
+		String path = request.getParameter("current_dir");
+		System.out.println(path);
+		String getpath = (String) session.getAttribute("con_dir");
+		path = path==null?getpath:path;
+		//String container = (String) session.getAttribute("current_dir");
+		SwiftApi swift =swift_util.getSwift();
+		ObjectApi objectApi = swift.getObjectApi("RegionOne", path);
+		//ListContainerOptions opts = ListContainerOptions.Builder.path(path);
+		System.out.println(path);
+		List<? extends SwiftObject>  objects = objectApi.list();
+//		for(int i = 0 ; i< objects.size(); i++){
+//			
+//			String Name =  objects.get(i).getName();
+//	 		
+//	 		System.out.println(Name);
+//			
+//		}
+	    session.setAttribute("objs",objects);
+	    session.setAttribute("path",path);    
+	    response.sendRedirect("./disk/showfile.jsp");
 	}
 
 	/**
@@ -45,22 +68,9 @@ public class ShowFile extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		/*
-		 * 文件列表（对象）
+		 * show file
 		 */
-		request.setCharacterEncoding("UTF-8"); 
-	    response.setCharacterEncoding("UTF-8");
-		HttpSession session=request.getSession();
-		String path = request.getParameter("current_dir");
-		String getpath = (String) session.getAttribute("current_dir");
-		path = path==null?getpath:path;
-		String container = (String) session.getAttribute("current_dir");
-		SwiftApi swift =swift_util.getSwift();
-		ObjectApi objectApi = swift.getObjectApi("RegionOne", container);
-		ListContainerOptions opts = ListContainerOptions.Builder.path(path);
-		List<? extends SwiftObject>  objects = objectApi.list(opts);
-	    session.setAttribute("objs",objects);
-	    session.setAttribute("path",path);    
-	    response.sendRedirect("./disk/storage.jsp");
+		
 	}
 
 }

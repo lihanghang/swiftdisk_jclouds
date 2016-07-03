@@ -1,0 +1,76 @@
+package com.app.db;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.jclouds.http.options.GetOptions;
+import org.jclouds.openstack.swift.v1.SwiftApi;
+import org.jclouds.openstack.swift.v1.domain.SwiftObject;
+import org.jclouds.openstack.swift.v1.features.ObjectApi;
+
+import com.swift.dao.swift_util;
+
+/**
+ * Servlet implementation class DownLoadFile
+ */
+@WebServlet("/DownLoadFile")
+public class DownLoadFile extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public DownLoadFile() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		 SwiftApi swift = swift_util.getSwift();
+		 HttpSession session=req.getSession();
+        String container = (String) session.getAttribute("path");
+        String objectName = req.getParameter ("objectName");
+        ObjectApi objectApi = swift.getObjectApi("RegionOne", container);
+        SwiftObject obj = objectApi.get(objectName, GetOptions.NONE);
+        System.out.println(container);
+		//String[] realName = objectName.split("/");
+		//String filename = realName[realName.length-1];
+		System.out.print(objectName);
+        
+        InputStream in = obj.getPayload().openStream();
+        FileOutputStream out = new FileOutputStream("D://cloud_disk_download"+objectName );
+        byte buffer[] = new byte[1024];
+        int len = 0;
+        while((len=in.read(buffer))>=0){
+        	out.write(buffer, 0, len);
+        }
+        in.close();
+        out.close();  
+        res.sendRedirect("./disk/down_info.jsp");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		/*
+		 * download file
+		 */
+		
+	}
+	}
+
+

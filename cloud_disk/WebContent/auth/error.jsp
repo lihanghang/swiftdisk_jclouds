@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="../Resources/resource/css/disk.css"/>
 		<link rel="stylesheet" href="../Resources/resource/css/base.css"/>
 		<link rel="stylesheet" href="../Resources/resource/css/skin.css"/>
+		<link rel="shortcut icon" href="https://www.fangcloud.com/favicon.ico" type="image/x-icon">
 		<style>
 			#error{
 				text-align:center;

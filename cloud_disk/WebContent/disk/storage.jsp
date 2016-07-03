@@ -89,7 +89,7 @@
              <a class="btn btn-default btn-sm" href="#">全部文件</a>
              <% String current_path = (String)session.getAttribute("current_path"); %>
 		     <input type="hidden" id="current_path" value=<%=current_path %>>
-		     <a class="btn btn-default btn-sm" href="#"><%=current_path %></a>  
+		     <a class="btn btn-default btn-sm" href="../ShowFile?current_dir=<%=current_path %>"><%=current_path %></a>  
         </div>
         <div id="uploadcontrol" class="pull-right">
 
@@ -97,9 +97,9 @@
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 新建文件夹
             </button>
-            <button class="btn btn-success" data-toggle="modal" data-target="#uploadModal">
+       <!--     <button class="btn btn-success" data-toggle="modal" data-target="#uploadModal">
                 <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>
-                                     上 传 </button>
+                                     上 传 </button>  -->  
         </div>
      </div>
     </div>
@@ -126,7 +126,7 @@
 					</div>
 				</div>
 				<div  style=" text-align:center" >
-					<input class="ajax-file-upload" style=" text-align:center  cursor: default;" type="submit"value="上传">
+		<!-- <input class="ajax-file-upload" style=" text-align:center  cursor: default;" type="submit"value="上传"> -->			
 				</div>
 			</div>
 		</form>
@@ -212,11 +212,11 @@
 
         <thead>
           <tr>
-            <th class="listcheckbox"></th>
-            <th class="listfilename"><a href="">文件名</a></th>
-            <th class="allcontrol"><span id="operateonfiles">文件操作</span></th>
-            <th class="listsize"><a href="">大小</a></th>
-            <th class="listdate"><a href="">修改日期</a></th>
+            <th class="listfilename"></th>         
+            <th class="listfilename"><a href="">目录名</a></th>
+            <th class="allcontrol"><span id="operateonfiles">目录操作</span></th>
+            <th class="listsize"><a href="#">大小</a></th>
+            <th class="listdate"><a href="#">文件数目</a></th>
           </tr>
         </thead>
     <tbody id="filebody">
@@ -226,7 +226,7 @@
 						%> 
             <tr class="fileinfo">
         
-                <td class="listcheckbox"><%int i =1; i ++ ;out.print(i);%></td>
+                <td class="listcheckbox"></td>
                 <td class="listfilename">
                 <div class="folder-icon icon" style="float:left"></div>
                 <div style="float:left" class="filename-wrapper">
@@ -234,13 +234,7 @@
               
 						
                     <a href="../ShowFile?current_dir=<%=containerTmp.getName()%>" class="file-name-wrapper">
-                           <span class="file-name"> <%=containerTmp.getName()%></span>
-						
-					
-                
-                
-                
-                
+                           <span class="file-name"> <%=containerTmp.getName()%></span>		
                 
                     </a>
                 </div>
@@ -248,7 +242,8 @@
                
                 <td class="file_control">
                 <a  onclick="return window.confirm('确定要删除此文件？')" href="../DeleteFile?current_dir=<%=containerTmp.getName() %>" >删除</a>
-                <a href="http://localhost:8080/cloud_disk/storage.jsp?current_dir=test" >下载</a>
+                
+                <a href="../ShowFile?current_dir=<%=containerTmp.getName() %>" >打开</a>
                  </td>
                
                
@@ -271,7 +266,7 @@
                 }
                 
                 %></td>
-                <td class="listdate">##</td>
+                <td class="listdate"><%=containerTmp.getObjectCount()%></td>
             </tr>
             	
 						<%
